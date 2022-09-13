@@ -1,0 +1,135 @@
+$primary-1: hsl(31, 77%, 52%);
+$primary-2: hsl(184, 100%, 22%);
+$primary-3: hsl(179, 100%, 13%);
+$neutral-1: hsla(0, 0%, 100%, 0.75);
+$neutral-2: hsl(0, 0%, 95%);
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+$font-lexend: "Lexend Deca", sans-serif;
+$font-bs: "Big Shoulders Display", cursive;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $neutral-2;
+  overflow: scroll;
+  position: relative;
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 42px;
+    color: $neutral-1;
+    border-radius: 8px;
+    overflow: hidden;
+    height: calc(500 / 1440 * 1440px);
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-family: $font-lexend;
+      width: 308px;
+      padding: 48px 49px;
+      background-color: $primary-1;
+      h1 {
+        font-family: $font-bs;
+        font-size: 40px;
+        color: $neutral-2;
+        text-transform: uppercase;
+        margin-top: 9px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+      }
+      button {
+        margin-top: 56px;
+        border: 0px;
+        padding: 14.5px 31px;
+        font-size: 15px;
+        border-radius: 30px;
+        font-family: $font-lexend;
+        color: $primary-1;
+        background-color: $neutral-2;
+        &:hover {
+          cursor: pointer;
+          color: $neutral-2;
+          background-color: $primary-1;
+          box-shadow: inset 0px 0px 0px 3px $neutral-1;
+        }
+      }
+      &#suv {
+        background-color: $primary-2;
+        button {
+          color: $primary-2;
+          &:hover {
+            color: $neutral-2;
+            background-color: $primary-2;
+          }
+        }
+      }
+      &#luxury {
+        background-color: $primary-3;
+        button {
+          color: $primary-3;
+          &:hover {
+            color: $neutral-2;
+            background-color: $primary-3;
+          }
+        }
+      }
+    }
+  }
+  .attribution {
+    font-family: $font-lexend;
+    width: 100vw;
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    a {
+      color: $primary-2;
+      text-decoration: none;
+      &:hover {
+        color: $primary-3;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) or (max-width: 375px) {
+  body {
+    padding: 88px 24px;
+    main {
+      flex-direction: column;
+      height: 100%;
+      margin-top: 0px;
+      max-width: calc(100vw - (2 * 24px));
+      section {
+        width: inherit;
+        padding: 48px;
+        height: calc(667px - (2 * 112.5px));
+        h1 {
+          margin-top: 10px;
+        }
+        button {
+          margin-top: unset;
+        }
+      }
+    }
+  }
+  footer.attribution {
+    font-size: 12px;
+  }
+}
