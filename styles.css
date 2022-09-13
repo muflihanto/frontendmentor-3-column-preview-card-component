@@ -26,7 +26,7 @@ body main {
   overflow: hidden;
   height: 500px;
 }
-body main section {
+body main section.product-preview {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,18 +36,18 @@ body main section {
   padding: 48px 49px;
   background-color: hsl(31deg, 77%, 52%);
 }
-body main section h1 {
-  font-family: "Big Shoulders Display", cursive;
+body main section.product-preview h1 {
+  font-family: "Big Shoulders Display", sans-serif;
   font-size: 40px;
   color: hsl(0deg, 0%, 95%);
   text-transform: uppercase;
   margin-top: 9px;
 }
-body main section p {
+body main section.product-preview p {
   font-size: 15px;
   line-height: 25px;
 }
-body main section button {
+body main section.product-preview button {
   margin-top: 56px;
   border: 0px;
   padding: 14.5px 31px;
@@ -57,29 +57,29 @@ body main section button {
   color: hsl(31deg, 77%, 52%);
   background-color: hsl(0deg, 0%, 95%);
 }
-body main section button:hover {
+body main section.product-preview button:hover {
   cursor: pointer;
   color: hsl(0deg, 0%, 95%);
   background-color: hsl(31deg, 77%, 52%);
   box-shadow: inset 0px 0px 0px 3px hsla(0deg, 0%, 100%, 0.75);
 }
-body main section#suv {
+body main section.product-preview.suv {
   background-color: hsl(184deg, 100%, 22%);
 }
-body main section#suv button {
+body main section.product-preview.suv button {
   color: hsl(184deg, 100%, 22%);
 }
-body main section#suv button:hover {
+body main section.product-preview.suv button:hover {
   color: hsl(0deg, 0%, 95%);
   background-color: hsl(184deg, 100%, 22%);
 }
-body main section#luxury {
+body main section.product-preview.luxury {
   background-color: hsl(179deg, 100%, 13%);
 }
-body main section#luxury button {
+body main section.product-preview.luxury button {
   color: hsl(179deg, 100%, 13%);
 }
-body main section#luxury button:hover {
+body main section.product-preview.luxury button:hover {
   color: hsl(0deg, 0%, 95%);
   background-color: hsl(179deg, 100%, 13%);
 }
@@ -110,15 +110,15 @@ body .attribution a:hover {
     margin-top: 0px;
     max-width: calc(100vw - 48px);
   }
-  body main section {
+  body main section.product-preview {
     width: inherit;
     padding: 48px;
     height: 442px;
   }
-  body main section h1 {
+  body main section.product-preview h1 {
     margin-top: 10px;
   }
-  body main section button {
+  body main section.product-preview button {
     margin-top: unset;
   }
   footer.attribution {

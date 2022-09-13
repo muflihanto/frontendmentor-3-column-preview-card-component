@@ -5,7 +5,7 @@ $neutral-1: hsla(0, 0%, 100%, 0.75);
 $neutral-2: hsl(0, 0%, 95%);
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 $font-lexend: "Lexend Deca", sans-serif;
-$font-bs: "Big Shoulders Display", cursive;
+$font-bs: "Big Shoulders Display", sans-serif;
 
 *,
 *::before,
@@ -32,7 +32,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     height: calc(500 / 1440 * 1440px);
-    section {
+    section.product-preview {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -68,7 +68,7 @@ body {
           box-shadow: inset 0px 0px 0px 3px $neutral-1;
         }
       }
-      &#suv {
+      &.suv {
         background-color: $primary-2;
         button {
           color: $primary-2;
@@ -78,7 +78,7 @@ body {
           }
         }
       }
-      &#luxury {
+      &.luxury {
         background-color: $primary-3;
         button {
           color: $primary-3;
@@ -116,7 +116,7 @@ body {
       height: 100%;
       margin-top: 0px;
       max-width: calc(100vw - (2 * 24px));
-      section {
+      section.product-preview {
         width: inherit;
         padding: 48px;
         height: calc(667px - (2 * 112.5px));
